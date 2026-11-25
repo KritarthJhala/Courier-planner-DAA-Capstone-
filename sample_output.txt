@@ -1,0 +1,26 @@
+Dataset: data/small.json | parcels=8 nodes=8 capacity=20
+Sorted order (deadline, -priority): [2, 6, 4, 8, 1, 7, 3, 5]
+
+=== Trip 1 ===
+Parcels   : [2, 6, 4, 8]  (load 20/20 kg, value 261)
+Stop order: Depot -> B -> A -> C -> E -> Depot
+Road path : Depot -> B -> A -> C -> D -> E -> D -> C -> A -> B -> Depot
+Route len : 26
+
+=== Trip 2 ===
+Parcels   : [1, 7, 3]  (load 18/20 kg, value 114)
+Stop order: Depot -> A -> D -> G -> Depot
+Road path : Depot -> B -> A -> C -> D -> E -> F -> G -> Depot
+Route len : 27
+
+=== Trip 3 ===
+Parcels   : [5]  (load 6/20 kg, value 14)
+Stop order: Depot -> F -> Depot
+Road path : Depot -> G -> F -> G -> Depot
+Route len : 26
+
+--- Stage runtimes (ms) ---
+sort     : 0.007
+knapsack : 0.054
+dijkstra : 0.081
+tsp      : 0.023
